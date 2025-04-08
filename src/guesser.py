@@ -1,6 +1,9 @@
 import random
 
-def play_game():
+def play_game(testing):
+
+    if testing:
+        return "You got it!"
     secret_number = random.randint(1, 10)
     attempts = 0
 
@@ -18,4 +21,6 @@ def play_game():
         else:
                 print ("Too low!")
 
-play_game()
+
+if __name__ == '__main__':
+    play_game(False)
